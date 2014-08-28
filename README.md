@@ -1,4 +1,4 @@
-# BlackSwan Android Fever app
+# BlackSwan iOS Fever app
 
 Show us what you can do and how clean your code is! Write an app that uses public APIs to fetch data and display it in an organized way.
 
