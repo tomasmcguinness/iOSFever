@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DiC-aK-8ww">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Space Sounds-->
+        <scene sceneID="5h0-eA-i4S">
+            <objects>
+                <tableViewController id="Riw-GL-40E" customClass="SoundsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FOQ-ZW-YIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="5hS-8E-8rs" detailTextLabel="rJj-C7-Aw2" style="IBUITableViewCellStyleValue1" id="aL6-bj-S8C">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aL6-bj-S8C" id="irO-Ns-NSU">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Space Sounds" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5hS-8E-8rs">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rJj-C7-Aw2">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fTw-JT-lKo" kind="show" id="wFS-jM-PXT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Riw-GL-40E" id="Wx1-RL-xqe"/>
+                            <outlet property="delegate" destination="Riw-GL-40E" id="UdL-zU-eFA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Space Sounds" id="F3a-kl-Z2N"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uK-yV-8P5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="287"/>
+        </scene>
+        <!--Sound View Controller-->
+        <scene sceneID="ayv-cU-sxI">
+            <objects>
+                <viewController id="fTw-JT-lKo" customClass="SoundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUW-Ez-fue"/>
+                        <viewControllerLayoutGuide type="bottom" id="ApE-zv-iQC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y1I-ze-UUn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maD-DO-1Id">
+                                <rect key="frame" x="0.0" y="72" width="600" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="tdr-Ei-K6Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDy-J3-5Qe">
+                                <rect key="frame" x="292" y="313" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="8Xf-Jp-Xxk"/>
+                                    <constraint firstAttribute="height" constant="16" id="noE-C1-URU"/>
+                                </constraints>
+                                <state key="normal" image="glyphicons_173_play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonClicked:" destination="fTw-JT-lKo" eventType="touchUpInside" id="WGu-Va-c3p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hDy-J3-5Qe" secondAttribute="centerX" id="ISv-Lx-OzC"/>
+                            <constraint firstItem="maD-DO-1Id" firstAttribute="leading" secondItem="y1I-ze-UUn" secondAttribute="leadingMargin" constant="-16" id="TVT-xE-T4h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="maD-DO-1Id" secondAttribute="trailing" constant="-16" id="Zg6-vJ-1pz"/>
+                            <constraint firstItem="maD-DO-1Id" firstAttribute="top" secondItem="xUW-Ez-fue" secondAttribute="bottom" constant="8" id="aAg-Es-ddF"/>
+                            <constraint firstItem="hDy-J3-5Qe" firstAttribute="top" secondItem="maD-DO-1Id" secondAttribute="bottom" constant="91" id="yyI-dd-FtS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="maD-DO-1Id" id="xJZ-4G-hWn"/>
+                        <outlet property="playPauseButton" destination="hDy-J3-5Qe" id="dBK-aK-r88"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cU8-Lr-zGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721" y="286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lfJ-JR-gI2">
+            <objects>
+                <navigationController id="DiC-aK-8ww" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Yh-VA-OgN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Riw-GL-40E" kind="relationship" relationship="rootViewController" id="PPt-sX-moM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uP-bA-1c5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="glyphicons_173_play" width="16" height="18"/>
+    </resources>
+</document>
